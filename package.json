@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/wolmi/nodejs-docker/issues"
   },
-  "homepage": "https://github.com/wolmi/nodejs-docker#readme"
+  "homepage": "https://github.com/wolmi/nodejs-docker#readme",
+  "devDependencies": {
+    "standard-version": "^4.4.0"
+  }
 }
