@@ -2,8 +2,8 @@ FROM node:8-alpine
 
 WORKDIR /
 
-# Enable SSL
-RUN apk --update add ca-certificates wget python curl tar
+# Install packages needed
+RUN apk --update add ca-certificates wget python curl tar openssh git bash docker
 
 # Install gcloud and kubectl
 # kubectl will be available at /google-cloud-sdk/bin/kubectl
@@ -17,12 +17,5 @@ RUN google-cloud-sdk/install.sh --usage-reporting=true --path-update=true --bash
 # Users won't be bugged with notifications to update to the latest version of gcloud.
 RUN google-cloud-sdk/bin/gcloud config set --installation component_manager/disable_update_check true
 
-# Helm plugins require git
-# helm-diff requires bash, curl
-RUN apk --update add git bash
-
-# Install Docker daemon
-
-RUN apk add docker
-
+# Install standard-version module
 RUN npm i -g standard-version
