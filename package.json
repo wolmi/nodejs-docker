@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-docker",
+  "version": "1.0.0",
+  "description": "Image that contains nodeJS and docker to be used as a packager with standard-version module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolmi/nodejs-docker.git"
+  },
+  "author": "Miquel Ortega",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wolmi/nodejs-docker/issues"
+  },
+  "homepage": "https://github.com/wolmi/nodejs-docker#readme"
+}
